@@ -24,6 +24,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 import LibraryBooks from '@material-ui/icons/LibraryBooks';
 import CreateComponentIcon from '@material-ui/icons/AddCircleOutline';
 import MoneyIcon from '@material-ui/icons/MonetizationOn';
+import SettingsApplicationsIcon from '@material-ui/icons/SettingsApplications';
 import LogoFull from './LogoFull';
 import LogoIcon from './LogoIcon';
 import {
@@ -89,6 +90,7 @@ const Root = ({ children }: PropsWithChildren<{}>) => (
       <SidebarDivider />
       <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
       <SidebarItem icon={RuleIcon} to="lighthouse" text="Lighthouse" />
+      <SidebarItem icon={SettingsApplicationsIcon} to="cmdb" text="CMDB" />
       <SidebarItem icon={MoneyIcon} to="cost-insights" text="Cost Insights" />
       <SidebarItem
         icon={graphiQLRouteRef.icon!}
