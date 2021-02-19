@@ -13,12 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { createPlugin, createRoutableExtension } from '@backstage/core';
+import {createApiFactory, createPlugin, createRoutableExtension, discoveryApiRef} from '@backstage/core';
 
 import { rootRouteRef } from './routes';
+import {cmdbApiRef, CmdbClient} from "./api";
 
 export const cmdbPlugin = createPlugin({
   id: 'cmdb',
+  apis: [
+    createApiFactory({
+      api: cmdbApiRef,
+      deps: { discoveryApi: discoveryApiRef },
+      factory: ({ discoveryApi }) => new CmdbClient({ discoveryApi }),
+    }),
+  ],
   routes: {
     root: rootRouteRef,
   },
@@ -27,7 +35,7 @@ export const cmdbPlugin = createPlugin({
 export const CmdbPage = cmdbPlugin.provide(
   createRoutableExtension({
     component: () =>
-      import('./components/ExampleComponent').then(m => m.ExampleComponent),
+      import('./components/CmdbComponent').then(m => m.CmdbComponent),
     mountPoint: rootRouteRef,
   }),
 );

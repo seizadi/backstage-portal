@@ -68,7 +68,12 @@ proxy:
     headers:
       Authorization:
         $env: SENTRY_TOKEN
-
+  '/cmdb/api':
+    target: http://localhost:8080
+    headers:
+      Content-Type: 'application/json'
+      Authorization:
+          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBY2NvdW50SUQiOjF9.GsXyFDDARjXe1t9DPo2LIBKHEal3O7t3vLI3edA7dGU'
 organization:
   name: My Company
 
