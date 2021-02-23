@@ -90,7 +90,7 @@ const Root = ({ children }: PropsWithChildren<{}>) => (
       <SidebarDivider />
       <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
       <SidebarItem icon={RuleIcon} to="lighthouse" text="Lighthouse" />
-      <SidebarItem icon={SettingsApplicationsIcon} to="cmdb" text="CMDB" />
+      <SidebarItem icon={SettingsApplicationsIcon} to="apptriton" text="Apptriton" />
       <SidebarItem icon={MoneyIcon} to="cost-insights" text="Cost Insights" />
       <SidebarItem
         icon={graphiQLRouteRef.icon!}

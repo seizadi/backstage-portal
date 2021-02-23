@@ -13,4 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export { CmdbComponent } from './CmdbComponent';
+import React from 'react';
+import { createDevApp } from '@backstage/dev-utils';
+import { apptritonPlugin, ApptritonPage } from '../src/plugin';
+
+createDevApp()
+  .registerPlugin(apptritonPlugin)
+  .addPage({
+    element: <ApptritonPage />,
+    title: 'Root Page',
+  })
+  .render();

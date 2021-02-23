@@ -39,7 +39,7 @@ import { EntityPage } from './components/catalog/EntityPage';
 import Root from './components/Root';
 import { providers } from './identityProviders';
 import * as plugins from './plugins';
-import { CmdbPage } from 'plugin-cmdb';
+import { ApptritonPage } from 'plugin-Apptriton';
 
 const app = createApp({
   apis,
@@ -89,7 +89,7 @@ const routes = (
     />
     <Route path="/settings" element={<SettingsRouter />} />
     {...deprecatedAppRoutes}
-    <Route path="/cmdb" element={<CmdbPage />}/>
+    <Route path="/Apptriton" element={<ApptritonPage />}/>
   </FlatRoutes>
 );
 

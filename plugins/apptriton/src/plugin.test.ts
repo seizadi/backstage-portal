@@ -13,4 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export { CmdbFetchComponent } from './CmdbFetchComponent';
+import { apptritonPlugin } from './plugin';
+
+describe('apptriton', () => {
+  it('should export plugin', () => {
+    expect(apptritonPlugin).toBeDefined();
+  });
+});

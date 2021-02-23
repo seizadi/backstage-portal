@@ -13,10 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { cmdbPlugin } from './plugin';
+import { createRouteRef } from '@backstage/core';
 
-describe('cmdb', () => {
-  it('should export plugin', () => {
-    expect(cmdbPlugin).toBeDefined();
-  });
+export const rootRouteRef = createRouteRef({
+  title: 'apptriton',
 });
