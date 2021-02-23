@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { cmdbPlugin } from './plugin';
+import { ***REMOVED***Plugin } from './plugin';
 
-describe('cmdb', () => {
+describe('***REMOVED***', () => {
   it('should export plugin', () => {
-    expect(cmdbPlugin).toBeDefined();
+    expect(***REMOVED***Plugin).toBeDefined();
   });
 });

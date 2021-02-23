@@ -43,7 +43,7 @@
     "@roadiehq/backstage-plugin-github-pull-requests": "^0.6.3",
     "@roadiehq/backstage-plugin-travis-ci": "^0.2.8",
     "history": "^5.0.0",
-    "plugin-cmdb": "^0.1.1",
+    "plugin-***REMOVED***": "^0.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

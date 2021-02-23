@@ -16,21 +16,21 @@
 
 import { createApiRef, DiscoveryApi } from '@backstage/core';
 
-export type CmdbApplication = {
+export type ***REMOVED***Application = {
   id: string;
   name: string;
 };
 
-export type CmdbApplications = {
-  applications: CmdbApplication[];
+export type ***REMOVED***Applications = {
+  applications: ***REMOVED***Application[];
 };
 
-export const cmdbApiRef = createApiRef<CmdbApi>({
-  id: 'plugin.cmdb.service',
-  description: 'Used by the CMDB plugin to make requests',
+export const ***REMOVED***ApiRef = createApiRef<***REMOVED***Api>({
+  id: 'plugin.***REMOVED***.service',
+  description: 'Used by the ***REMOVED*** plugin to make requests',
 });
 
-const DEFAULT_PROXY_PATH_BASE = '/cmdb/api';
+const DEFAULT_PROXY_PATH_BASE = '/***REMOVED***/api';
 
 type Options = {
   discoveryApi: DiscoveryApi;
@@ -40,11 +40,11 @@ type Options = {
   proxyPathBase?: string;
 };
 
-export interface CmdbApi {
-  getApplications(): Promise<CmdbApplications>;
+export interface ***REMOVED***Api {
+  getApplications(): Promise<***REMOVED***Applications>;
 }
 
-export class CmdbClient implements CmdbApi {
+export class ***REMOVED***Client implements ***REMOVED***Api {
   private readonly discoveryApi: DiscoveryApi;
   private readonly proxyPathBase: string;
 
@@ -53,7 +53,7 @@ export class CmdbClient implements CmdbApi {
     this.proxyPathBase = options.proxyPathBase ?? DEFAULT_PROXY_PATH_BASE;
   }
 
-  async getApplications(): Promise<CmdbApplications> {
+  async getApplications(): Promise<***REMOVED***Applications> {
     const url = await this.getApiUrl('applications?_order_by=name&_fields=id,name');
     const response = await fetch(url);
     let responseJson;
@@ -66,7 +66,7 @@ export class CmdbClient implements CmdbApi {
 
     if (response.status !== 200) {
       throw new Error(
-        `Error communicating with CMDB Server: ${
+        `Error communicating with ***REMOVED*** Server: ${
           responseJson?.error?.title || response.statusText
         }`,
       );

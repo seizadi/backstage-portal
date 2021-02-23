@@ -68,8 +68,9 @@ proxy:
     headers:
       Authorization:
         $env: SENTRY_TOKEN
-  '/cmdb/api':
-    target: http://localhost:8080
+  '/***REMOVED***/api':
+#    target: http://localhost:8080
+    target: http://192.168.99.102:30080
     headers:
       Content-Type: 'application/json'
       Authorization:

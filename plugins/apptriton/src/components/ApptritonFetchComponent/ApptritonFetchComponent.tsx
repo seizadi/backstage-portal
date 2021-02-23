@@ -17,13 +17,13 @@ import React from 'react';
 import {Table, TableColumn, Progress, useApi} from '@backstage/core';
 import Alert from '@material-ui/lab/Alert';
 import { useAsync } from 'react-use';
-import { cmdbApiRef, CmdbApplications } from '../../api';
+import { ***REMOVED***ApiRef, ***REMOVED***Applications } from '../../api';
 
-// type DenseTableProps = {
-//   applications: CmdbApplications;
-// };
+type DenseTableProps = {
+  applications: ***REMOVED***Applications;
+};
 
-export const DenseTable = ( { applications }: CmdbApplications) => {
+export const DenseTable = ( { applications }: DenseTableProps) => {
 
   const columns: TableColumn[] = [
     { title: 'Id', field: 'id' },
@@ -41,7 +41,7 @@ export const DenseTable = ( { applications }: CmdbApplications) => {
 
   return (
     <Table
-      title="Example Application List (fetching data from CMDB Server)"
+      title="Example Application List (fetching data from ***REMOVED*** Server)"
       options={{ search: false, paging: false }}
       columns={columns}
       data={data}
@@ -49,8 +49,8 @@ export const DenseTable = ( { applications }: CmdbApplications) => {
   );
 };
 
-export const CmdbFetchComponent = () => {
-  const api = useApi(cmdbApiRef);
+export const ***REMOVED***FetchComponent = () => {
+  const api = useApi(***REMOVED***ApiRef);
 
   const { value, loading, error } = useAsync(async () => {
     return await api.getApplications();

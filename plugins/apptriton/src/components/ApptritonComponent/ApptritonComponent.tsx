@@ -24,11 +24,11 @@ import {
   HeaderLabel,
   SupportButton,
 } from '@backstage/core';
-import { CmdbFetchComponent } from '../CmdbFetchComponent';
+import { ***REMOVED***FetchComponent } from '../***REMOVED***FetchComponent';
 
-export const CmdbComponent = () => (
+export const ***REMOVED***Component = () => (
   <Page themeId="tool">
-    <Header title="Welcome to cmdb!" subtitle="Optional subtitle">
+    <Header title="Welcome to ***REMOVED***!" subtitle="Optional subtitle">
       <HeaderLabel label="Owner" value="Team X" />
       <HeaderLabel label="Lifecycle" value="Alpha" />
     </Header>
@@ -45,7 +45,7 @@ export const CmdbComponent = () => (
           </InfoCard>
         </Grid>
         <Grid item>
-          <CmdbFetchComponent />
+          <***REMOVED***FetchComponent />
         </Grid>
       </Grid>
     </Content>

@@ -13,8 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { createRouteRef } from '@backstage/core';
+import React from 'react';
+import { createDevApp } from '@backstage/dev-utils';
+import { ***REMOVED***Plugin, ***REMOVED***Page } from '../src/plugin';
 
-export const rootRouteRef = createRouteRef({
-  title: 'cmdb',
-});
+createDevApp()
+  .registerPlugin(***REMOVED***Plugin)
+  .addPage({
+    element: <***REMOVED***Page />,
+    title: 'Root Page',
+  })
+  .render();

@@ -16,15 +16,15 @@
 import {createApiFactory, createPlugin, createRoutableExtension, discoveryApiRef} from '@backstage/core';
 
 import { rootRouteRef } from './routes';
-import {cmdbApiRef, CmdbClient} from "./api";
+import {***REMOVED***ApiRef, ***REMOVED***Client} from "./api";
 
-export const cmdbPlugin = createPlugin({
-  id: 'cmdb',
+export const ***REMOVED***Plugin = createPlugin({
+  id: '***REMOVED***',
   apis: [
     createApiFactory({
-      api: cmdbApiRef,
+      api: ***REMOVED***ApiRef,
       deps: { discoveryApi: discoveryApiRef },
-      factory: ({ discoveryApi }) => new CmdbClient({ discoveryApi }),
+      factory: ({ discoveryApi }) => new ***REMOVED***Client({ discoveryApi }),
     }),
   ],
   routes: {
@@ -32,10 +32,10 @@ export const cmdbPlugin = createPlugin({
   },
 });
 
-export const CmdbPage = cmdbPlugin.provide(
+export const ***REMOVED***Page = ***REMOVED***Plugin.provide(
   createRoutableExtension({
     component: () =>
-      import('./components/CmdbComponent').then(m => m.CmdbComponent),
+      import('./components/***REMOVED***Component').then(m => m.***REMOVED***Component),
     mountPoint: rootRouteRef,
   }),
 );
