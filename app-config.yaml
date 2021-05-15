@@ -20,6 +20,7 @@ backend:
     allow:
       - host: example.com
       - host: '*.mozilla.org'
+      - host: raw.githubusercontent.com
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 # See README.md in the proxy-backend plugin for information on the configuration format
@@ -68,6 +69,7 @@ proxy:
     headers:
       Authorization:
         $env: SENTRY_TOKEN
+
   '/cmdb/api':
     target: http://localhost:8080
     headers:
