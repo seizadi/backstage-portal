@@ -16,15 +16,15 @@
 import {createApiFactory, createPlugin, createRoutableExtension, discoveryApiRef} from '@backstage/core';
 
 import { rootRouteRef } from './routes';
-import {cmdbApiRef, CmdbClient} from "./api";
+import {apptritonApiRef, ApptritonClient} from "./api";
 
-export const cmdbPlugin = createPlugin({
-  id: 'cmdb',
+export const apptritonPlugin = createPlugin({
+  id: 'apptriton',
   apis: [
     createApiFactory({
-      api: cmdbApiRef,
+      api: apptritonApiRef,
       deps: { discoveryApi: discoveryApiRef },
-      factory: ({ discoveryApi }) => new CmdbClient({ discoveryApi }),
+      factory: ({ discoveryApi }) => new ApptritonClient({ discoveryApi }),
     }),
   ],
   routes: {
@@ -32,10 +32,10 @@ export const cmdbPlugin = createPlugin({
   },
 });
 
-export const CmdbPage = cmdbPlugin.provide(
+export const ApptritonPage = apptritonPlugin.provide(
   createRoutableExtension({
     component: () =>
-      import('./components/CmdbComponent').then(m => m.CmdbComponent),
+      import('./components/ApptritonComponent').then(m => m.ApptritonComponent),
     mountPoint: rootRouteRef,
   }),
 );

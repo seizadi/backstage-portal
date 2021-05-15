@@ -24,11 +24,11 @@ import {
   HeaderLabel,
   SupportButton,
 } from '@backstage/core';
-import { CmdbFetchComponent } from '../CmdbFetchComponent';
+import { ApptritonFetchComponent } from '../ApptritonFetchComponent';
 
-export const CmdbComponent = () => (
+export const ApptritonComponent = () => (
   <Page themeId="tool">
-    <Header title="Welcome to cmdb!" subtitle="Optional subtitle">
+    <Header title="Welcome to Apptriton!" subtitle="Optional subtitle">
       <HeaderLabel label="Owner" value="Team X" />
       <HeaderLabel label="Lifecycle" value="Alpha" />
     </Header>
@@ -45,7 +45,7 @@ export const CmdbComponent = () => (
           </InfoCard>
         </Grid>
         <Grid item>
-          <CmdbFetchComponent />
+          <ApptritonFetchComponent />
         </Grid>
       </Grid>
     </Content>

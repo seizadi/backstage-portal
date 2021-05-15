@@ -16,21 +16,21 @@
 
 import { createApiRef, DiscoveryApi } from '@backstage/core';
 
-export type CmdbApplication = {
+export type ApptritonApplication = {
   id: string;
   name: string;
 };
 
-export type CmdbApplications = {
-  applications: CmdbApplication[];
+export type ApptritonApplications = {
+  applications: ApptritonApplication[];
 };
 
-export const cmdbApiRef = createApiRef<CmdbApi>({
-  id: 'plugin.cmdb.service',
-  description: 'Used by the CMDB plugin to make requests',
+export const apptritonApiRef = createApiRef<ApptritonApi>({
+  id: 'plugin.apptriton.service',
+  description: 'Used by the Apptriton plugin to make requests',
 });
 
-const DEFAULT_PROXY_PATH_BASE = '/cmdb/api';
+const DEFAULT_PROXY_PATH_BASE = '/apptriton/api';
 
 type Options = {
   discoveryApi: DiscoveryApi;
@@ -40,11 +40,11 @@ type Options = {
   proxyPathBase?: string;
 };
 
-export interface CmdbApi {
-  getApplications(): Promise<CmdbApplications>;
+export interface ApptritonApi {
+  getApplications(): Promise<ApptritonApplications>;
 }
 
-export class CmdbClient implements CmdbApi {
+export class ApptritonClient implements ApptritonApi {
   private readonly discoveryApi: DiscoveryApi;
   private readonly proxyPathBase: string;
 
@@ -53,7 +53,7 @@ export class CmdbClient implements CmdbApi {
     this.proxyPathBase = options.proxyPathBase ?? DEFAULT_PROXY_PATH_BASE;
   }
 
-  async getApplications(): Promise<CmdbApplications> {
+  async getApplications(): Promise<ApptritonApplications> {
     const url = await this.getApiUrl('applications?_order_by=name&_fields=id,name');
     const response = await fetch(url);
     let responseJson;
@@ -66,7 +66,7 @@ export class CmdbClient implements CmdbApi {
 
     if (response.status !== 200) {
       throw new Error(
-        `Error communicating with CMDB Server: ${
+        `Error communicating with Apptriton Server: ${
           responseJson?.error?.title || response.statusText
         }`,
       );
