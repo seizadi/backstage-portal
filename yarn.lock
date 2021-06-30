@@ -4937,6 +4937,11 @@
   resolved "https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-2.2.0.tgz#123e0438a0bc718ccdac3b5a2e69b3dd00daa85b"
   integrity sha512-274lNUDonw10kT8wHg8fCcUc1ZjZHbWv0/TbAwb0ojhBQqZYc1cQ/4yqTVTtPMDeZ//g7xVEYe/s3vURkRghPg==
 
+"@octokit/openapi-types@^8.1.3":
+  version "8.1.3"
+  resolved "https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-8.1.3.tgz#45fbb4b0e5a5d61b21aeef7f33d345e05766236b"
+  integrity sha512-iK7SfjjkGdIiopuKEMAzPxSagZtIzWjwfYFBFxLKIS4Q4S8rSLQk7EnlTok2/bNAz1BvxnGKPKe+auSiCIU5QQ==
+
 "@octokit/plugin-enterprise-rest@^6.0.1":
   version "6.0.1"
   resolved "https://registry.npmjs.org/@octokit/plugin-enterprise-rest/-/plugin-enterprise-rest-6.0.1.tgz#e07896739618dab8da7d4077c658003775f95437"
