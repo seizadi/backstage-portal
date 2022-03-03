@@ -5353,11 +5353,6 @@
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
-"@sindresorhus/is@^3.1.1":
-  version "3.1.2"
-  resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-3.1.2.tgz#548650de521b344e3781fbdb0ece4aa6f729afb8"
-  integrity sha512-JiX9vxoKMmu8Y3Zr2RVathBL1Cdu4Nt4MuNWemt1Nc06A0RAin9c5FArkhGsyMBWfCu4zj+9b+GxtjAnE4qqLQ==
-
 "@sindresorhus/is@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-4.0.0.tgz#2ff674e9611b45b528896d820d3d7a812de2f0e4"
@@ -14655,24 +14650,7 @@ google-p12-pem@^3.0.3:
   dependencies:
     node-forge "^0.10.0"
 
-got@^11.5.2:
-  version "11.6.0"
-  resolved "https://registry.npmjs.org/got/-/got-11.6.0.tgz#4978c78f3cbc3a45ee95381f8bb6efd1db1f4638"
-  integrity sha512-ErhWb4IUjQzJ3vGs3+RR12NWlBDDkRciFpAkQ1LPUxi6OnwhGj07gQxjPsyIk69s7qMihwKrKquV6VQq7JNYLA==
-  dependencies:
-    "@sindresorhus/is" "^3.1.1"
-    "@szmarczak/http-timer" "^4.0.5"
-    "@types/cacheable-request" "^6.0.1"
-    "@types/responselike" "^1.0.0"
-    cacheable-lookup "^5.0.3"
-    cacheable-request "^7.0.1"
-    decompress-response "^6.0.0"
-    http2-wrapper "^1.0.0-beta.5.2"
-    lowercase-keys "^2.0.0"
-    p-cancelable "^2.0.0"
-    responselike "^2.0.0"
-
-got@^11.7.0, got@^11.8.0:
+got@^11.5.2, got@^11.7.0, got@^11.8.0:
   version "11.8.0"
   resolved "https://registry.npmjs.org/got/-/got-11.8.0.tgz#be0920c3586b07fd94add3b5b27cb28f49e6545f"
   integrity sha512-k9noyoIIY9EejuhaBNLyZ31D5328LeqnyPNXJQb2XlJZcKakLqN5m6O/ikhq/0lw56kUYS54fVm+D1x57YC9oQ==
@@ -16960,6 +16938,11 @@ jose@^2.0.2:
   integrity sha512-L+RlDgjO0Tk+Ki6/5IXCSEnmJCV8iMFZoBuEgu2vPQJJ4zfG/k3CAqZUMKDYNRHIDyy0QidJpOvX0NgpsAqFlw==
   dependencies:
     "@panva/asn1.js" "^1.0.0"
+
+jose@^4.1.4:
+  version "4.5.1"
+  resolved "https://registry.npmjs.org/jose/-/jose-4.5.1.tgz#1531d491fafe567338fd517f118293cce27aa0aa"
+  integrity sha512-uhjuzZjKGKmi5DVJ/eghN8hJklLhwZRLRAaaG9MkkMAdfRYlHvZ10i4z/4WSN1hSTMffCet+k7iRHvbdGwmZPw==
 
 joycon@^2.2.5:
   version "2.2.5"
@@ -19780,10 +19763,10 @@ octokit-pagination-methods@^1.1.0:
   resolved "https://registry.npmjs.org/octokit-pagination-methods/-/octokit-pagination-methods-1.1.0.tgz#cf472edc9d551055f9ef73f6e42b4dbb4c80bea4"
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
-oidc-token-hash@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/oidc-token-hash/-/oidc-token-hash-5.0.0.tgz#acdfb1f4310f58e64d5d74a4e8671a426986e888"
-  integrity sha512-8Yr4CZSv+Tn8ZkN3iN2i2w2G92mUKClp4z7EGUfdsERiYSbj7P4i/NHm72ft+aUdsiFx9UdIPSTwbyzQ6C4URg==
+oidc-token-hash@^5.0.0, oidc-token-hash@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/oidc-token-hash/-/oidc-token-hash-5.0.1.tgz#ae6beec3ec20f0fd885e5400d175191d6e2f10c6"
+  integrity sha512-EvoOtz6FIEBzE+9q253HsLCVRiK/0doEJ2HCvvqMQb3dHZrP3WlJKYtJ55CRTw4jmYomzH4wkPuCj/I3ZvpKxQ==
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -19856,7 +19839,7 @@ opencollective-postinstall@^2.0.2:
   resolved "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
   integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
 
-openid-client@^4.1.1, openid-client@^4.2.1:
+openid-client@^4.1.1:
   version "4.2.1"
   resolved "https://registry.npmjs.org/openid-client/-/openid-client-4.2.1.tgz#8200c0ab6a3b8e954727dfa790847dc5cb8999c2"
   integrity sha512-07eOcJeMH3ZHNvx5DVMZQmy3vZSTQqKSSunbtM1pXb+k5LBPi5hMum1vJCFReXlo4wuLEqZ/OgbsZvXPhbGRtA==
@@ -19869,6 +19852,16 @@ openid-client@^4.1.1, openid-client@^4.2.1:
     object-hash "^2.0.1"
     oidc-token-hash "^5.0.0"
     p-any "^3.0.0"
+
+openid-client@^5.1.3:
+  version "5.1.3"
+  resolved "https://registry.npmjs.org/openid-client/-/openid-client-5.1.3.tgz#25ef0e48929f33462028001fd4077a7ae5b3ad4d"
+  integrity sha512-i5quCXurPkN50ndRLE2D3Q6khz6AieJ0gTKOmsl3G4ZIP/Udf5Qw5CMRdhMvbFvfKRrkcCWPFXmduFUFYTC0xw==
+  dependencies:
+    jose "^4.1.4"
+    lru-cache "^6.0.0"
+    object-hash "^2.0.1"
+    oidc-token-hash "^5.0.1"
 
 opn@^5.5.0:
   version "5.5.0"
