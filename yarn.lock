@@ -4932,6 +4932,11 @@
     "@octokit/types" "^6.0.0"
     universal-user-agent "^6.0.0"
 
+"@octokit/openapi-types@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-12.0.0.tgz#8cc7dd069cb2653084a812de758017ab9610af02"
+  integrity sha512-vzl7r3zZIiI/E2anenT4AIrffBow0HPkpPNtZpflQLaXdxeNw5e++APn7/8IiPZzwqNfCFNvkjmAj6R2HoU/cQ==
+
 "@octokit/openapi-types@^2.2.0":
   version "2.2.0"
   resolved "https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-2.2.0.tgz#123e0438a0bc718ccdac3b5a2e69b3dd00daa85b"
